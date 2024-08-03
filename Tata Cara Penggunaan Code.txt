@@ -1,0 +1,91 @@
+Dokumentasi Proyek Laravel
+Deskripsi Proyek
+Proyek ini adalah aplikasi berbasis Laravel yang dirancang untuk mengelola data buku. Aplikasi ini menyediakan fitur-fitur seperti menampilkan daftar buku, melihat detail buku, menambah, memperbarui, dan menghapus buku. Proyek ini juga mencakup endpoint API yang dapat diakses untuk mengelola data buku melalui REST API.
+
+Persyaratan
+Untuk menjalankan proyek ini, pastikan Anda memiliki persyaratan berikut:
+
+PHP >= 7.3
+Composer
+MySQL
+Git
+Postman (untuk pengujian API)
+
+Instalasi
+1. Clone Repository
+Silakan clone repository ini ke direktori lokal Anda dengan perintah berikut:
+
+git clone https://github.com/Gibrans567/Test-Magang.git
+cd Test-Magang
+
+Instal Dependensi
+Setelah masuk ke direktori proyek, instal semua dependensi yang diperlukan menggunakan Composer:
+
+composer install
+
+
+Konfigurasi Environment
+Salin file .env.example menjadi .env dan sesuaikan pengaturan database sesuai dengan konfigurasi lokal Anda:
+
+cp .env.example .env
+
+
+Edit file .env dan atur konfigurasi database seperti berikut:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel-api
+DB_USERNAME=root
+DB_PASSWORD=
+
+
+Menguji API Menggunakan Postman
+1. Instal Postman
+Jika belum terinstal, silakan unduh dan instal Postman dari situs resmi Postman.
+
+2. Impor Koleksi Postman
+Impor koleksi API Postman yang telah disediakan (Tugas_Magang API.postman_collection.json) ke dalam Postman.
+
+Buka Postman.
+Klik tombol Import di sudut kiri atas.
+Pilih file Tugas_Magang API.postman_collection.json dari direktori proyek Anda.
+Klik Open untuk mengimpor koleksi.
+3. Menjalankan Endpoint
+Gunakan endpoint yang tersedia dalam koleksi untuk menguji API. Endpoint yang tersedia antara lain:
+
+GET /api/buku: Mendapatkan daftar buku.
+GET /api/buku/{id}: Mendapatkan detail buku berdasarkan ID.
+POST /api/buku: Menambahkan buku baru.
+PUT /api/buku/{id}: Memperbarui buku berdasarkan ID.
+DELETE /api/buku/{id}: Menghapus buku berdasarkan ID.
+Pastikan server Laravel berjalan pada http://localhost:8000 saat menguji API.
+
+
+
+
+Struktur File Proyek
+Berikut adalah struktur file penting dalam proyek ini:
+project-name/
+├── app/
+│   ├── Buku.php            # Model Buku
+│   ├── Http/
+│       ├── Controllers/
+│           ├── BukuController.php  # Controller Buku
+├── database/
+│   ├── migrations/         # File migrasi database
+├── resources/
+│   ├── views/
+│       ├── index.blade.php # View untuk menampilkan daftar buku
+├── routes/
+│   ├── api.php             # Route untuk API
+│   ├── web.php             # Route untuk web
+├── .env                    # File konfigurasi environment
+├── composer.json           # File Composer untuk dependensi
+├── README.md               # Dokumentasi proyek
+├── buku.sql                # Backup database (opsional)
+├── Tugas_Magang API.postman_collection.json  # Koleksi API Postman
+
+
+
+Demikian dokumentasi ini kami buat dengan harapan dapat memudahkan Anda dalam mengatur dan menjalankan proyek ini. Jika terdapat pertanyaan atau masalah, jangan ragu untuk menghubungi kami melalui repository ini. Terima kasih.
