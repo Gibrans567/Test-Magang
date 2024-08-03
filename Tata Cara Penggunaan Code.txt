@@ -39,6 +39,11 @@ DB_DATABASE=laravel-api
 DB_USERNAME=root
 DB_PASSWORD=
 
+Setelah itu jalankan 
+Php artisan serve
+
+lalu masuk menggunakan Link
+http://127.0.0.1:8001/buku
 
 Menguji API Menggunakan Postman
 1. Instal Postman
